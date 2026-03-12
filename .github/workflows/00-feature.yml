@@ -24,6 +24,7 @@ jobs:
       run: |
         echo "=== TERRAFORM FORMAT CHECK ==="
         echo "Branch: ${{ github.ref_name }}"
+        terraform -chdir=terraform fmt
         terraform -chdir=terraform fmt -check=true
         echo "PASSED: Terraform format check passed"
 
