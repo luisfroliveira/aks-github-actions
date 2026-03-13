@@ -27,6 +27,10 @@ jobs:
       working-directory: terraform
       env:
         ARM_ACCESS_KEY: ${{ secrets.ARM_ACCESS_KEY }}
+        ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+        ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+        ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
       run: |
         echo "=== TERRAFORM VALIDATION FOR DEV ENVIRONMENT ==="
         terraform fmt -check=true
@@ -42,6 +46,10 @@ jobs:
       working-directory: terraform
       env:
         ARM_ACCESS_KEY: ${{ secrets.ARM_ACCESS_KEY }}
+        ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+        ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+        ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
       run: |
         echo "=== DEPLOYING TO DEV ENVIRONMENT ==="
         echo "Environment: DEV"
