@@ -11,6 +11,8 @@ resource "azurerm_kubernetes_cluster" "aks" {
   dns_prefix          = var.aks_dns_prefix
   kubernetes_version  = var.kubernetes_version
 
+  oidc_issuer_enabled = true
+
   # Free tier for labs
   sku_tier = "Free"
 
